@@ -1,0 +1,71 @@
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import toast, { Toaster } from 'react-hot-toast';
+
+export default function Blogs() {
+    const router = useRouter();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const pageNo = e.target.page.value;
+        const reviewNo = e.target.review.value;
+        console.log(pageNo, reviewNo);
+        if (pageNo && reviewNo) {
+            router.push(`/blogs/${pageNo}/review/${reviewNo}`);
+        }
+        else {
+            toast.error('Please enter Data!', { id: 'no-data-error' })
+        }
+    }
+    return (
+        <div>
+
+            <div className="my-5 px-10 py-4 grid grid-cols-6 mx-40">
+                <Link href="/">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Home</h1></a>
+                </Link>
+
+                <Link href="/contact">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Contact</h1></a>
+                </Link>
+
+                <Link href="/blogs">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Blogs</h1></a>
+                </Link>
+
+                <Link href="/docs/item-1/item-2">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Catch All</h1></a>
+                </Link>
+
+                <Link href="/users">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Users</h1></a>
+                </Link>
+
+                <Link href="/posts">
+                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>All Posts</h1></a>
+                </Link>
+
+            </div>
+
+            <h1 className="text-3xl text-center font-serif my-5">Welcome to the blog section</h1>
+            <div className="border-2 cursor-pointer rounded-lg p-20 m-20 text-green-500 hover:text-red-500">
+                <p className=" text-center text-lg">Here comes the blog area</p>
+            </div>
+            <div className="divider">OR</div>
+            <div className="border-2 cursor-pointer rounded-lg p-20 m-20 text-green-500 hover:text-red-500">
+                <p className=" text-center text-lg">Want to see some reviews?</p>
+                <form onSubmit={handleSubmit} className="flex justify-center align-middle my-3">
+                    <input name='page' type="text" placeholder="Page Number" className="m-2 input input-bordered input-secondary w-full max-w-xs" />
+                    <input name='review' type="text" placeholder="Review Number" className="m-2 input input-bordered input-secondary w-full max-w-xs" />
+                    <br />
+                    <input className="btn btn-active btn-primary mx-4 mt-2 px-10 py-2" type="submit" value="Go" />
+                </form>
+            </div>
+            <div className='flex justify-center align-middle'>
+                <button onClick={() => {
+                    router.push('/');
+                }} className="btn btn-active btn-secondary mb-10">Back to Home</button>
+            </div>
+            <Toaster />
+        </div>
+    )
+}
