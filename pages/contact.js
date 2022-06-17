@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Navbar from '../components/NavBar';
 
 export default function Contact() {
@@ -7,7 +6,6 @@ export default function Contact() {
     return (
         <div>
             <Navbar />
-
             <div className='my-10 border-2 rounded-lg p-10 m-10'>
                 <h1 className='text-center text-green-500 font-serif font-bold text-3xl mb-2'>Contact Us</h1>
                 <h1 className='text-center text-xl'>Office Location</h1>

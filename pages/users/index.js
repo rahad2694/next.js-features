@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Navbar from '../../components/NavBar';
 
 export default function Users({ users }) {
@@ -7,9 +6,7 @@ export default function Users({ users }) {
     console.log(users);
     return (
         <div>
-
             <Navbar></Navbar>
-
             <h1 className='text-center text-blue-500 font-serif font-bold text-5xl my-10 border-2 rounded-lg p-10 m-10'>Welcome to Users List</h1>
             <div className='text-center font-serif font-bold  my-10 border-2 rounded-lg p-10 m-10'>
                 <h1 className='text-2xl'>Customer Info:</h1>

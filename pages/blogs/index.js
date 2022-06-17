@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
 import Navbar from '../../components/NavBar';
 
@@ -19,9 +18,7 @@ export default function Blogs() {
     }
     return (
         <div>
-
             <Navbar />
-
             <h1 className="text-3xl text-center font-serif my-5">Welcome to the blog section</h1>
             <div className="border-2 cursor-pointer rounded-lg p-20 m-20 text-green-500 hover:text-red-500">
                 <p className=" text-center text-lg">Here comes the blog area</p>

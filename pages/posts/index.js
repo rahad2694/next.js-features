@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Navbar from '../../components/NavBar';
 
 export default function Posts({ posts }) {
-    // console.log(posts);
     const router = useRouter();
     return (
         <div>
@@ -22,8 +21,6 @@ export default function Posts({ posts }) {
                     </ul>)
                 }
             </div>
-
-
 
             <div className='flex justify-center align-middle'>
                 <button onClick={() => {
