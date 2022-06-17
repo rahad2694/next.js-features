@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
+import Navbar from '../../components/NavBar';
 
 export default function Blogs() {
     const router = useRouter();
@@ -19,32 +20,7 @@ export default function Blogs() {
     return (
         <div>
 
-            <div className="my-5 px-10 py-4 grid grid-cols-6 mx-40">
-                <Link href="/">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Home</h1></a>
-                </Link>
-
-                <Link href="/contact">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Contact</h1></a>
-                </Link>
-
-                <Link href="/blogs">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Blogs</h1></a>
-                </Link>
-
-                <Link href="/docs/item-1/item-2">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Catch All</h1></a>
-                </Link>
-
-                <Link href="/users">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Users</h1></a>
-                </Link>
-
-                <Link href="/posts">
-                    <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>All Posts</h1></a>
-                </Link>
-
-            </div>
+            <Navbar />
 
             <h1 className="text-3xl text-center font-serif my-5">Welcome to the blog section</h1>
             <div className="border-2 cursor-pointer rounded-lg p-20 m-20 text-green-500 hover:text-red-500">

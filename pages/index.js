@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import Navbar from '../components/NavBar';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,34 +16,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Next JS Routing Features
         </h1>
-
-        <div className="my-5 border-2 px-10 py-4 rounded-lg grid grid-cols-5">
-          <Link href="/blogs">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Blogs</h1></a>
-          </Link>
-
-          <Link href="/contact">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Contact</h1></a>
-          </Link>
-
-          <Link href="/users">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Users</h1></a>
-          </Link>
-
-          <Link href="/docs/item-1/item-2">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Catch All</h1></a>
-          </Link>
-
-          <Link href="/posts">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Posts</h1></a>
-          </Link>
-
-        </div>
+        <Navbar></Navbar>
       </main>
-
-      {/* <footer className={styles.footer}>
-        <p>Copyright Reserved 2022</p>
-      </footer> */}
     </div>
   )
 }

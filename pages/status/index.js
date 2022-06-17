@@ -2,13 +2,15 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Navbar from '../../components/NavBar';
 
-export default function Posts({ posts }) {
+export default function Status({ posts }) {
     // console.log(posts);
     const router = useRouter();
     return (
         <div>
-            <Navbar></Navbar>
-            <h1 className='text-center text-green-500 font-serif font-bold text-2xl my-10 border-2 rounded-lg p-10 m-10'>All Posts Using getStaticProps:</h1>
+
+            <Navbar />
+
+            <h1 className='text-center text-green-500 font-serif font-bold text-2xl my-10 border-2 rounded-lg p-10 m-10'>All Status Using SSR</h1>
 
             <div className='text-center font-serif font-bold  my-10 border-2 rounded-lg p-10 m-10'>
                 {/* <h1 className='text-2xl'>Customer Info:</h1> */}
@@ -34,8 +36,9 @@ export default function Posts({ posts }) {
     )
 }
 
-export async function getStaticProps() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+export async function getServerSideProps() {
+    const res = await fetch('http://localhost:5000/posts');
     const data = await res.json();
     return {
         props: {
