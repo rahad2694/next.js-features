@@ -16,7 +16,7 @@ export default function Users({ users }) {
                     </ul>)
                 }
             </div>
-            <div className='flex justify-center align-middle'>
+            <div className='flex justify-center align-middle mb-10'>
                 <button onClick={() => {
                     router.push('/');
                 }} className="btn btn-active btn-secondary">Back to Home</button>
