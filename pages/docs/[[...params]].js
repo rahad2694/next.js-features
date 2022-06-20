@@ -4,6 +4,7 @@ import Navbar from '../../components/NavBar';
 export default function Doc() {
     const router = useRouter();
     const { params } = router.query;
+    // console.log(params);
     return (
         <div>
             <Navbar />
@@ -16,6 +17,7 @@ export default function Doc() {
                     </ul>)
                 }
             </div>
+
             <div className='flex justify-center align-middle'>
                 <button onClick={() => {
                     router.push('/');

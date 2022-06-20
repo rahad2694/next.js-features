@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function Navbar() {
-    return <div className="my-5 py-2 grid grid-cols-8 px-20 sticky top-0 z-50 bg-[#2a303c]">
+    return <div className="my-5 py-2 grid grid-cols-9 px-20 sticky top-0 z-50 bg-[#2a303c]">
         <Link href="/">
             <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Home</h1></a>
         </Link>
@@ -18,8 +18,8 @@ export default function Navbar() {
             <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Catch All</h1></a>
         </Link>
 
-        <Link href="/users">
-            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Users</h1></a>
+        <Link href="/albums">
+            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>Albums</h1></a>
         </Link>
 
         <Link href="/posts">
@@ -32,6 +32,10 @@ export default function Navbar() {
 
         <Link href="/todos">
             <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>All Todos</h1></a>
+        </Link>
+
+        <Link href="/crud">
+            <a><h1 className='text-lg m-2 font-semibold border-2 px-3 py-1 rounded-lg hover:text-red-500 text-center'>CRUD</h1></a>
         </Link>
 
     </div>

@@ -7,7 +7,7 @@ export default function Posts({ posts }) {
     return (
         <div>
             <Navbar></Navbar>
-            <h1 className='text-center text-green-500 font-serif font-bold text-2xl my-10 border-2 rounded-lg p-10 m-10'>All Posts Using getStaticProps:</h1>
+            <h1 className='text-center text-green-500 font-serif font-bold text-2xl my-10 border-2 rounded-lg p-10 m-10'>All Posts Using getStaticProps + ISR(10 sec):</h1>
 
             <div className='text-center font-serif font-bold  my-10 border-2 rounded-lg p-10 m-10'>
                 {/* <h1 className='text-2xl'>Customer Info:</h1> */}
@@ -37,6 +37,7 @@ export async function getStaticProps() {
     return {
         props: {
             posts: data
-        }
+        },
+        revalidate: 10
     }
 }
